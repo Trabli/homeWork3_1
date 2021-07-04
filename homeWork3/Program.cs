@@ -6,18 +6,16 @@ namespace homeWork3
     {
         static void Main(string[] args)
         {
-            int imagesQuantity = 52;
-            int rowOfImages;
-            int extraImages;
+            int images_inOneRow = 3;
+            int images_InAlbum = 52;
 
-            rowOfImages = imagesQuantity / 3;
-            extraImages = imagesQuantity % 3;
+            int row_WithImages = images_InAlbum / images_inOneRow;
+            int imagesLeft = images_InAlbum % images_inOneRow;
 
             Console.WriteLine("У пользователя альбом с 52-мя картинками.");
             Console.WriteLine("Их нужно вывести на экран по 3 в ряд, и узнать остаток картинок.");
-            Console.WriteLine("Картинки можно вывести в " + rowOfImages + " рядов");
-            Console.WriteLine(extraImages + " картинка не влезет в ряды и будет в остатке");
-
+            Console.WriteLine("Картинки можно вывести в " + row_WithImages + " рядов");
+            Console.WriteLine(imagesLeft + " картинка не влезет в ряды и будет в остатке");
         }
     }
 }
